@@ -1,0 +1,150 @@
+main::before{
+    content: "";
+    position: absolute;
+    background: #d0d5eb46;
+    box-shadow: #13131383 100px 100px 0px ;
+    top: 5%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    animation: fondo 6s linear infinite;
+    transition: transform 3s ease;
+}
+main{
+    background: url("../img/fondoIndex.svg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+}
+main::after{
+    content: "";
+    position: absolute;
+    background:#4639ff8a;
+    box-shadow: #dcd0ebbd 100px -100px 0px ;
+    right:10% ;
+    bottom: 5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    animation: fondo2 5s linear infinite;
+    transition: transform 3s ease;
+}
+
+@keyframes fondo {
+    0%{
+        transform: translateY(0px);
+        transition: transform 3s ease;
+    }
+    50%{
+        transform: translate(0%,25%);
+        transition: transform 3s ease;
+    }
+    100%{
+        transform: translateY(0);
+        transition: transform 3s ease;
+    }
+}
+@keyframes fondo2 {
+    0%{
+        transform: translateY(0px);
+        transition: transform 3s ease;
+    }
+    50%{
+        transform: translate(0%,-20%);
+        transition: transform 3s ease;
+    }
+    100%{
+        transform: translateY(0);
+        transition: transform 3s ease;
+    }
+}
+
+h1{
+    font-size: 4.5rem;
+    text-align: center;
+    color: #d0d5eb;
+    text-shadow: 5px 4px 0px #1313134b;
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+section.botones{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+}
+.btnInicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.botones a {
+    display: flex;
+    justify-content: center;
+    width: 23%;
+    margin: 1vh;
+    text-decoration: none;
+}
+.botones button,
+.juegoNuevo button{
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    width: 100%;
+    height: 9vh;
+    background: #4639ff;
+    background-size: cover;
+    color: #d0d5eb;
+    border: none;
+    padding: 1%;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: background .5s ease;
+}
+button:hover{
+    background:#131313;
+    color: #d0d5eb;
+    transition: background .5s ease;
+}
+.botones button h3{
+    font-size: 1.5rem;
+    padding-left: 10%;
+}
+.botones button ion-icon{
+    position: absolute;
+    right: 5%;
+    width: 45px;
+    height: 100%;
+}
+
+@media (max-width:1000px) {
+    .btnInicio{
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .btnInicio a{
+        width: 80%;
+    }
+    .botones button{
+        width: 100%;
+        height: 9vh;
+    }
+    main::after{
+        bottom: 0;
+        right: 10%;
+    }
+    main::before{
+        top: 0;
+        left: -10%;
+    }
+}

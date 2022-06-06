@@ -1,0 +1,100 @@
+.base {
+    width: 25px;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 137px;
+    right: 310px;
+}
+.soporte1{
+    width: 25px;
+    position: absolute;
+    top:35px;
+    right:390px ;
+    z-index: 1;
+}
+.soporte2{
+    width: 120px;
+    position: absolute;
+    right: 282px;
+    top: 35px;
+}
+.cuerda{
+    width: 20px;
+    position: absolute;
+    right: 280px;
+    top: 50px;
+    z-index: 2;
+}
+.cabeza{
+    width: 25px;
+    position: absolute;
+    right: 270px;
+    top: 80px;
+    z-index: 3;
+}
+.tronco{
+    width: 30px;
+    position: absolute;
+    right: 275px;
+    top: 100px;
+    z-index: 1;
+}
+.brazoIzq{
+    width: 40px;
+    position: absolute;
+    right: 290px;
+    top: 100px;
+}
+.brazoDer{
+    width: 40px;
+    position: absolute;
+    right: 250px;
+    top: 100px;
+}
+.piernaDer{
+    width: 20px;
+    position: absolute;
+    right: 270px;
+    top: 125px;
+}
+.piernaIzq{
+    width: 27px;
+    position: absolute;
+    right: 287px;
+    top: 125px;
+}
+
+@media (max-width:900px) {
+
+    .base {
+        right: 300px;
+    }
+    .soporte1{
+        right:380px ;
+    }
+    .soporte2{
+        right: 272px;
+    }
+    .cuerda{
+        right: 270px;
+    }
+    .cabeza{
+        right: 260px;
+    }
+    .tronco{
+        right: 265px;
+    }
+    .brazoIzq{
+        right: 280px;
+    }
+    .brazoDer{
+        right: 240px;
+    }
+    .piernaDer{
+        right: 260px;
+    }
+    .piernaIzq{
+        right: 277px;
+    }
+
+}

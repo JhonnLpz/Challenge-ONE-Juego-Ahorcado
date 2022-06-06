@@ -1,0 +1,464 @@
+@import url("./main.css");
+
+nav.menuNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: absolute; */
+    flex-direction: column;
+    /* right: 1vw; */
+    margin: 4.2vh;
+    width: 16.5%;
+    padding: 2%;
+    height: 85vh;
+    border-radius: 2vh;
+    background: #d0d5eb;
+    background-size: cover;
+    color: #13131348;
+    flex-wrap: wrap;
+}
+
+.menuNavegacion p {
+    color: #131313;
+    width: 100%;
+    height: fit-content;
+    font-size: 1.3vw;
+    /* position: absolute; */
+    top: 0;
+}
+
+.menuNavegacion a#btnAgregar {
+    /* position: absolute; */
+    /* top: 55%; */
+    width: 100%;
+}
+
+.menuNavegacion button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    border: none;
+    height: 7vh;
+    background: #4639ff;
+    color: #d0d5eb;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 2vh;
+    transition: background .5s ease;
+    cursor: pointer;
+}
+
+.menuNavegacion button:hover {
+    background: #131313;
+    transition: background .5s ease;
+}
+
+.menuNavegacion button ion-icon {
+    /* position: absolute; */
+    /* right: 3%; */
+    height: 5.5vw;
+    width: 5.5vh;
+    transition: transform .5s ease;
+}
+
+.menuNavegacion button ion-icon:hover {
+    transform: rotate(360deg);
+    transition: transform .5s ease;
+}
+
+.menuNavegacion button h3 {
+    width: 80%;
+    /* height: 100%; */
+    font-size: 3vh;
+    text-align: center;
+}
+
+.menuNavegacion h3 {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.sobreMi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /* height: 21%; */
+
+}
+
+.logoPersonal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65%;
+}
+
+nav.menuNavegacion img {
+    width: 20%;
+}
+
+nav.menuNavegacion h4 {
+    width: 100%;
+    text-align: center;
+    color: #4639ff;
+    padding-left: 3%;
+    font-weight: 800;
+    font-size: 4vh;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+}
+
+.redes a {
+    text-decoration: none;
+    color: #4639ff;
+    transition: transform .5s ease;
+}
+
+.redes a ion-icon {
+    width: 6vw;
+    height: 6vh;
+}
+
+.redes a:hover {
+    transform: translateY(1vh);
+    transition: transform .5s ease;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/fondoJuego.svg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 85vh;
+    background: #4639ff2c;
+    background-size: cover;
+    border-radius: 2vh;
+    padding: 2%;
+    border: #4639ff23 2px solid;
+    transition: juego 3s;
+    animation: juego 2s;
+}
+
+@keyframes juego {
+    0% {
+        transform: translateY(-100%);
+    }
+}
+
+.juego h2 {
+    width: 90%;
+    height: fit-content;
+    padding: 2vh;
+    border-radius: 2vh;
+    color: #d0d5eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: #13131348;
+
+}
+
+.canvasAhorcado {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imgAhorcado {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.contenidoAhorcado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.palabra {
+    text-align: center;
+    font-size: 3.5vw;
+    word-wrap: break-word;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #4639ff;
+    width: 100%;
+    height: fit-content;
+    margin: 1vh;
+    letter-spacing: 1rem;
+}
+
+.fallos {
+    width: 100%;
+    height: 10%;
+    margin: 2vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #d0d5eb;
+    text-align: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+section.juegoNuevo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    height: 20%;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7%;
+}
+
+.juegoNuevo button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 55%;
+    height: 7vh;
+    background: #4639ffb6;
+    color: #d0d5eb;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 2vh;
+    transition: background .5s ease;
+}
+
+.juegoNuevo button:hover {
+    background: #131313;
+    color: aliceblue;
+    transition: background .5s ease;
+}
+
+.juegoNuevo button ion-icon {
+    position: absolute;
+    right: 3%;
+    height: 40px;
+    width: 40px;
+    transition: transform .5s ease;
+}
+
+.juegoNuevo button ion-icon:hover {
+    transform: rotate(360deg);
+    transition: transform .5s ease;
+}
+
+.juegoNuevo button h3 {
+    width: 90%;
+    text-align: left;
+}
+
+.gameOver{
+    width: 90%;
+    height: fit-content;
+    padding: 1.5vh;
+    font-size: 1em;
+    letter-spacing: normal;
+    background: red;
+    border-radius: 3vh;
+}
+
+.modalPerdiste,
+.modalPerdiste.active,
+.modalGanaste,
+.modalGanaste.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000b6;
+    width: 100%;
+    height: 100% ;
+    position: fixed;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    transition: display 3s;
+    z-index: 4;
+    animation: modal .5s ease-in ;
+}
+
+.modalGameOver ,
+.modalWin{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0%;
+    align-items: flex-start;
+    color: #131313;
+    text-align: center;
+    padding: 5%;
+    width: 30vw;
+    height: 40%;
+    background: #131313;
+    color: #fff;
+    border-radius: 2vh;
+}
+
+@keyframes modal {
+    0%{ opacity: 0; }
+}
+
+.tituloGameOver,
+.tituloWin{
+    width: 100%;
+    height: 50%;
+    color: #e71010;
+    font-size: 2.5em;
+}
+.tituloGameOver h2,
+.tituloWin h2{
+    font-size: 5.5vh;
+}
+.tituloGameOver ion-icon,
+.tituloWin ion-icon{
+    width: 100%;
+    height: 50%;
+}
+p#textoGameOver{
+    width: 100%;
+    align-self: flex-end;
+    color: #d0d5eb;
+    font-size: 3vh;
+}
+
+.modalGameOver button,
+.modalWin button{
+    background: #4639ff;
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 13%;
+    align-self: flex-end;
+    border-radius: 2vh;
+    font-size: 2.3vh;
+    color: #d0d5eb;
+    text-decoration: none;
+    z-index: 2;
+}
+.modalGameOver button a,
+.modalWin button a {
+    text-decoration: none;
+    color: #d0d5eb;
+}
+
+.modalWin::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../img/exito.gif");
+    position: absolute;
+    /* background-size: cover; */
+    left: 0;
+    top: 0;
+    border-radius: 2vh;
+    pointer-events: none;
+}
+
+.tituloWin h2,
+.tituloWin ion-icon {
+    color: green;
+}
+
+p#textoWin{
+    width: 100%;
+    font-size: 3vh;
+}
+
+@media (max-width:900px) {
+    .juego {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .juegoNuevo button {
+        width: 100%;
+        margin: 0.5vh;
+    }
+
+    nav.menuNavegacion {
+        width: 85%;
+    }
+
+    .palabra {
+        font-size: 10vw;
+    }
+
+    .contenidoAhorcado {
+        height: 35vh;
+        margin-top: 20%;
+
+    }
+
+    .img {
+        width: 50%;
+        left: 55vw;
+    }
+    .modalGameOver,
+    .modalWin{
+        width: 85%;
+        height: 55%;
+    }
+    .modalWin{
+        height: 40%;
+    }
+}

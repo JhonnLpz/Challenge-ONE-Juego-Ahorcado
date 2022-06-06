@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/empezarJuego.css">
+    <link rel="stylesheet" href="./css/ahorcadoDibujo.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <title>Juego Ahorcado - Nuevo Juego</title>
+</head>
+
+<body onkeyup="letraTeclado(palabraEscogida[0])">
+
+    <div class="modalPerdiste" style="display: none;">
+        <div class="modalGameOver">
+            <div class="tituloGameOver">
+                <ion-icon name="alert-circle-sharp"></ion-icon>
+                <h2>Perdiste 😕</h2>
+            </div>
+            <p id="textoGameOver">
+            </p>
+            <button type="button" id="btnCerrar">
+                <a href="./empezarJuego.html">
+                    Reiniciar
+                </a>
+            </button>
+
+            <button onclick="cerrarModal()" type="button" id="btnCerrar">Cerrar</button>
+        </div>
+    </div>
+
+    <div class="modalGanaste" style="display: none;">
+        <div class="modalWin">
+            <div class="tituloWin">
+                <ion-icon name="checkmark-done-circle"></ion-icon>
+                <h2>Ganaste ! 🥳</h2>
+            </div>
+            <p id="textoWin">
+                Acertaste la palabra !
+            </p>
+            <button type="button" id="btnCerrar">
+                <a href="./empezarJuego.html">
+                    Reiniciar
+                </a>
+            </button>
+
+            <button onclick="cerrarModal()" type="button" id="btnCerrar">Cerrar</button>
+        </div>
+    </div>
+    <main>
+
+        <div class="juego">
+            <h2> Presiona cualquier tecla para empezar a adivinar </h2>
+            <section class="canvasAhorcado">
+                <div class="imgAhorcado">
+                    <div class="contenidoAhorcado">
+                        <div class="img">
+                            <img class="base" style="display: flex;" src="img/Ahorcado-Diseño/soporte1.svg" alt="">
+                            <img class="soporte1 tablero" style="display: none;" src="img/Ahorcado-Diseño/soporte1.svg" alt="">
+                            <img class="soporte2 tablero" style="display: none;" src="img/Ahorcado-Diseño/soporte2.svg" alt="">
+                            <img class="cuerda tablero" style="display: none;" src="img/Ahorcado-Diseño/cuerda.svg" alt="">
+                            <img class="cabeza tablero" style="display: none;" src="img/Ahorcado-Diseño/cabeza.svg" alt="">
+                            <img class="tronco tablero" style="display: none;" src="img/Ahorcado-Diseño/tronco.svg" alt="">
+                            <img class="brazoDer tablero" style="display: none;" src="img/Ahorcado-Diseño/brazoDer.svg" alt="">
+                            <img class="brazoIzq tablero" style="display: none;" src="img/Ahorcado-Diseño/brazoIzq.svg" alt="">
+                            <img class="piernaIzq tablero" style="display: none;" src="img/Ahorcado-Diseño/piernaIzq.svg"alt="">
+                            <img class="piernaDer tablero" style="display: none;" src="img/Ahorcado-Diseño/piernaDer.svg"alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="palabra">
+
+                </div>
+                <div class="fallos">
+                    <p>hola</p>
+                </div>
+            </section>
+
+            <section class="juegoNuevo">
+                <!-- boton agregar palabra -->
+                <a href="./empezarJuego.html">
+                    <button class="" onclick="pantallaCarga()" type="button">
+                        <h3>Reiniciar
+                            <ion-icon name="refresh-circle"></ion-icon>
+                        </h3>
+                    </button>
+                </a>
+
+                <a href="./index.html">
+                    <button class="" type="button">
+                        <h3>Desistir</h3>
+                        <ion-icon name="exit"></ion-icon>
+                    </button>
+                </a>
+            </section>
+        </div>
+
+        <nav class="menuNavegacion">
+            <p class="descripcion">
+                Bienvenido
+            </p>
+            <a id="btnAgregar" href="agregarPalabra.html">
+                <button type="button">
+                    <h3>Agregar Palabra</h3>
+                    <ion-icon name="add-circle"></ion-icon>
+                </button>
+            </a>
+            <div class="sobreMi">
+                <h3>Realizado por :</h3>
+                <div class="logoPersonal">
+                    <img src="./img/favicon.svg" alt="JhonLogo">
+                    <h4>Jhon Lopez</h4>
+                </div>
+
+                <div class="redes">
+                    <a href="https://github.com/JhonnLpz" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jhonlopez11/" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </main>
+    <!-- solo debe admitir letras sin caracteres especiales
+    -no debe admitir numeros
+    -letras equivocadas deben aparecer abajo de los guiones
+    ,sin estar repetidas
+    -->
+    <script src="./js/juego.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

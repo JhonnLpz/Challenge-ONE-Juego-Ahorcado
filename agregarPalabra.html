@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/empezarJuego.css">
+    <link rel="stylesheet" href="./css/agregarPalabra.css">
+    <title>Juego Ahorcado - Agregar Palabra</title>
+</head>
+
+<body>
+    <main>
+        <section class="agregarPalabra">
+            <h2>Agregar Palabra</h2>
+            <input type="text" class="agregar" onkeyup="this.value = validarTexto(this.value)" placeholder="Escribe aqui la palabra">
+            <p style="width :80%;">
+                <ion-icon name="alert-circle-sharp"></ion-icon>
+                max 10 letras
+            </p>
+            <a>
+                <button type="submit" class="btnAgregar" onclick="almacenar()">Agregar</button>
+            </a>
+            <a href="./index.html">
+                <button type="button">Regresar</button>
+            </a>
+        </section>
+        <div class="modal">
+            <div class="modalError" style="display: none;">
+                <div class="tituloError">
+                    <ion-icon name="alert-circle-sharp"></ion-icon>
+                    <h2>Ingresa un valor valido</h2>
+                </div>
+                <p>solo se admiten palabras sin caracteres especiales
+                    y/o mayores a una letra
+                </p>
+                <button onclick="cerrarModal()" type="button" id="btnCerrar">Cerrar</button>
+            </div>
+            <div class="modalExito" style="display: none;">
+                <div class="tituloExito">
+                    <ion-icon name="checkmark-done-circle"></ion-icon>
+                    <h2>Listo !</h2>
+                </div>
+                <p>
+                    Palabra agregada exitosamente
+                </p>
+                <button onclick="cerrarModal()" type="button" id="btnCerrar">Cerrar</button>
+            </div>
+            <div class="modalRepeticion" style="display: none;">
+                <div class="tituloRepeticion">
+                    <ion-icon name="warning"></ion-icon>
+                    <h2>Palabra ya agregada</h2>
+                </div>
+                <p>
+                    Esta palabra ya está agregada, inserta una diferente
+                </p>
+                <button onclick="cerrarModal()" type="button" id="btnCerrar">Cerrar</button>
+            </div>
+        </div>
+
+    </main>
+    <!-- solo debe admitir letras sin caracteres especiales
+    -no debe admitir numeros
+    -letras equivocadas deben aparecer abajo de los guiones
+    ,sin estar repetidas
+    -->
+    <!-- <script src="./js/juego.js"></script> -->
+    <script src="./js/agregarPalabra.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

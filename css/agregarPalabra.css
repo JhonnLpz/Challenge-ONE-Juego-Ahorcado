@@ -1,0 +1,193 @@
+main{
+    background: url("../img/fondoAgregarPalabra.svg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.agregarPalabra{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 70vh;
+    background: url("../img/fondoAgregar.svg") no-repeat;
+    background-size: cover;
+    border-radius: 2vw;
+}
+h2{
+    font-size: 2em;
+    color: #212121;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: 8vh;
+}
+input{
+    color: #131313;
+    background: #e9e7e7;
+    width: 80%;
+    font-weight: 600;
+    padding-left: 3%;
+    height: 8vh;
+    border-radius: 2vw;
+    border: none;
+    outline: none;
+}
+input::placeholder{
+    color: #131313;
+    font-weight: 400;
+}
+a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 7%;
+    margin: 1vh;
+}
+.agregarPalabra button{
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 100%;
+    height: 8vh;
+    background: #212121;
+    color: #e9e7e7;
+    border: none;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+.agregarPalabra button:hover{
+    background:#e9e7e7;
+    color: #212121;
+}
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000b6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: display 3s;
+}
+.modalError.active,
+.modalExito.active,
+.modalRepeticion.active{
+    position: absolute;
+    top: 20%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0%;
+    align-items: flex-start;
+    color: #131313;
+    text-align: center;
+    padding: 5%;
+    width: 30vw;
+    height: 40%;
+    background: #131313;
+    color: #fff;
+    border-radius: 2vw;
+    transition: display 5s;
+}
+.tituloError,
+.tituloExito,
+.tituloRepeticion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.tituloError ion-icon,
+.tituloExito ion-icon,
+.tituloRepeticion ion-icon{
+    width: 100%;
+    height: 50%;
+    color: red;
+}
+
+.modalError.active h2,
+.modalExito.active h2,
+.modalRepeticion.active h2{
+    font-size: 1.7em;
+    font-weight: 600;
+    color: red;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+.modalError.active p,
+.modalExito.active p,
+.modalRepeticion.active p{
+    font-size: 1.3em;
+    width: 100%;
+    height: 40%;
+    text-align: left;
+}
+.modalError.active button,
+.modalExito.active button,
+.modalRepeticion.active button{
+    width: 20%;
+    height: 10%;
+    background: red;
+    color: #e9e7e7;
+    border: none;
+    padding: 1vh;
+    cursor: pointer;
+    border-radius: 2vw;
+    margin-left: 5%;
+    position: absolute;
+    right:8%;
+    bottom: 7%;
+}
+.modal .active button:hover{
+    background: #4639ffa8;
+}
+/* modal exito */
+.tituloExito ion-icon{
+    color: green;
+}
+.modalExito.active h2{
+    color: green;
+}
+.modalExito.active button{
+    background: green;
+    color: #e9e7e7;
+}
+/* modal repeticion */
+.tituloRepeticion ion-icon{
+    color: #fdb314;
+}
+.modalRepeticion.active h2{
+    color: #fdb314;
+}
+.modalRepeticion.active button{
+    background: #fdb314;
+    color: #131313;
+    font-weight: 600;
+}
+
+@media (max-width:900px) {
+    .modalError.active,
+    .modalExito.active,
+    .modalRepeticion.active{
+        width: 85%;
+        height: 55%;
+    }
+    .agregarPalabra{
+        border-radius: 2vh;
+        width: 90vw;
+        height: 60vh;
+    }
+    input{
+        font-size: 1.1em;
+        width: 80%;
+    }
+    a{
+        width: 40%;
+    }
+}
